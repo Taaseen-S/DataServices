@@ -1,9 +1,9 @@
 # Clone the repository
-git clone https://github.com/yourcompany/yourproject.git
+git clone https://github.com/path.git
 cd yourproject
 
 # Create a new branch for the changes
-git checkout -b feature/your-new-feature
+git checkout -b feature/new-feature
 
 # Make changes in the code or database scripts
 # ...
@@ -15,4 +15,4 @@ git commit -m "Describe the changes made"
 # Push the feature branch to the remote repository
 git push origin feature/your-new-feature
 
-# Create a pull request through the Git hosting platform's UI
+# Create a pull request
