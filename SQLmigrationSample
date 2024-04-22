@@ -1,0 +1,18 @@
+-- Migration script to add a new customer table
+BEGIN TRANSACTION;
+
+TRY
+    CREATE TABLE Customers (
+        CustomerID INT PRIMARY KEY,
+        FirstName VARCHAR(50),
+        LastName VARCHAR(50),
+        Email VARCHAR(100)
+    );
+
+    -- Assuming successful creation, commit the transaction
+    COMMIT TRANSACTION;
+EXCEPTION
+    -- If there is an error, roll back the transaction
+    ROLLBACK TRANSACTION;
+    THROW; -- Re-throw the error to be caught by CI/CD tools
+END TRY
